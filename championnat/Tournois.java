@@ -16,7 +16,7 @@ public class Tournois {
 
 		Joueurs cent = new Joueurs("Champion du monde", 2000);
 
-		Joueurs[] liste = { un, deux, trois, quatre };
+		Joueurs[] liste = { un, deux, trois, quatre, cinq, six, sept, huit };
 
 		// premieres parties
 
@@ -60,11 +60,67 @@ public class Tournois {
 		if (six.getVictoires() >= 1 && huit.getVictoires() >= 1) {
 			six.affronte(huit);
 		}
+		if (un.getVictoires() >= 2 && cinq.getVictoires() >= 2) {
+			un.affronte(cinq);
+
+		}
+		if (un.getVictoires() >= 2 && six.getVictoires() >= 2) {
+			un.affronte(six);
+
+		}
+		if (un.getVictoires() >= 2 && sept.getVictoires() >= 2) {
+			un.affronte(sept);
+		}
+		if (un.getVictoires() >= 2 && huit.getVictoires() >= 2) {
+			un.affronte(huit);
+		}
+		if (deux.getVictoires() >= 2 && cinq.getVictoires() >= 2) {
+			deux.affronte(cinq);
+
+		}
+		if (deux.getVictoires() >= 2 && six.getVictoires() >= 2) {
+			deux.affronte(six);
+
+		}
+		if (deux.getVictoires() >= 2 && sept.getVictoires() >= 2) {
+			deux.affronte(sept);
+		}
+		if (deux.getVictoires() >= 2 && huit.getVictoires() >= 2) {
+			deux.affronte(huit);
+		}
+		if (trois.getVictoires() >= 2 && cinq.getVictoires() >= 2) {
+			trois.affronte(cinq);
+
+		}
+		if (trois.getVictoires() >= 2 && six.getVictoires() >= 2) {
+			trois.affronte(six);
+
+		}
+		if (trois.getVictoires() >= 2 && sept.getVictoires() >= 2) {
+			trois.affronte(sept);
+		}
+		if (trois.getVictoires() >= 2 && huit.getVictoires() >= 2) {
+			trois.affronte(huit);
+		}
+		if (quatre.getVictoires() >= 2 && cinq.getVictoires() >= 2) {
+			quatre.affronte(cinq);
+
+		}
+		if (quatre.getVictoires() >= 2 && six.getVictoires() >= 2) {
+			cinq.affronte(six);
+
+		}
+		if (quatre.getVictoires() >= 2 && sept.getVictoires() >= 2) {
+			quatre.affronte(sept);
+		}
+		if (quatre.getVictoires() >= 2 && huit.getVictoires() >= 2) {
+			quatre.affronte(huit);
+		}
 
 		// vainqueur
 
 		for (int i = 0; i < liste.length; i++) {
-			if (liste[i].getVictoires() == 2) {
+			if (liste[i].getVictoires() == 3) {
 				System.out.println(
 						" Le vainqueur du tournois est " + liste[i].getName() + " il a " + liste[i].getElo() + " elo ");
 				liste[i].affronte(cent);
