@@ -45,18 +45,19 @@ public class Joueurs {
 		this.victoires = nouveauVictoires;
 	}
 
-	public void affronte(Joueurs opposant) {
+	public Joueurs getWinner(Joueurs opposant) {
 		Random aleatoir = new Random();
-		int jet = aleatoir.nextInt(100) + 1;
+		boolean gain = aleatoir.nextBoolean();
 		System.out.println(getName() + " affronte " + opposant.getName() + " " + getName() + " a " + getElo()
 				+ " elo et " + opposant.getName() + " a " + opposant.getElo() + " elo");
-		if (jet > 51) {
+		if (gain) {
 			elo = elo + 10;
 			victoires = victoires + 1;
 			opposant.setElo(opposant.getElo() - 10);
 			opposant.setVictoires(opposant.getVictoires() + 0);
 			System.out.println(getName() + " gagne contre " + opposant.getName() + " " + getVictoires()
 					+ " victoire pour " + getName());
+			return this;
 
 		} else {
 			elo = elo - 10;
@@ -65,7 +66,7 @@ public class Joueurs {
 			opposant.setVictoires(opposant.getVictoires() + 1);
 			System.out.println(opposant.getName() + " gagne contre " + getName() + " " + opposant.getVictoires()
 					+ " victoire pour " + opposant.getName());
-
+			return opposant;
 		}
 
 	}
