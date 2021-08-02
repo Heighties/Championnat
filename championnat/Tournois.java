@@ -9,7 +9,7 @@ public class Tournois {
 
 		List<Joueurs> qualifies = initialisationDuTournois();
 
-		Joueurs cent = new Joueurs("Champion du monde", 2000);
+		Joueurs cent = new Joueurs("Magnus Carlsen", 2000);
 		int round = 1;
 		while (qualifies.size() > 1) {
 			System.out.println("round " + round);
@@ -21,7 +21,7 @@ public class Tournois {
 
 		Joueurs nouveauChampionDuMonde = vainqueur.getWinner(cent);
 		if (nouveauChampionDuMonde == cent) {
-			System.out.println("Le champion du monde reste champion du monde!");
+			System.out.println("Magnus Carlsen reste champion du monde!");
 		} else {
 			System.out.println("Le nouveau champion du monde est " + nouveauChampionDuMonde.getName());
 
